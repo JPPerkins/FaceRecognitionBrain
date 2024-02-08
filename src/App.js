@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ParticlesBg from 'particles-bg'
+
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
@@ -6,7 +8,6 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 import Rank from './components/Rank/Rank';
-import ParticlesBg from 'particles-bg'
 import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 
 const initialState = {
@@ -107,19 +108,23 @@ class App extends Component {
         <ParticlesBg color="#FFFFFF" num={175} type="cobweb" bg={true} />
           <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         { route === 'home' 
-          ? <div> <Logo />
-          <Rank name={this.state.user.name} entries={this.state.user.entries} />
-          <ImageLinkForm 
-            onInputChange={this.onInputChange} 
-            onButtonSubmit={this.onPictureSubmit}
-          />
-          <FaceRecognition box={box} imageUrl={imageUrl}/>
-        </div>
+          ? <div> 
+              <Logo />
+              <Rank 
+                name={this.state.user.name} 
+                entries={this.state.user.entries} 
+              />
+              <ImageLinkForm 
+                onInputChange={this.onInputChange} 
+                onButtonSubmit={this.onPictureSubmit}
+              />
+              <FaceRecognition box={box} imageUrl={imageUrl} />
+            </div>
           : (
             route === 'signin' 
               ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
               : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-          )
+            )   
         }
        </div>
     );
