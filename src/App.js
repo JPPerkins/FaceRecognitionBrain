@@ -64,7 +64,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://jp-smart-brain-api.onrender.com//imageurl', {
+    fetch('https://jp-smart-brain-api.onrender.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
