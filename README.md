@@ -2,18 +2,18 @@
 This is the frontend of the Smart Brain project, a full-stack web application for facial recognition.
 
 ## Technologies Used
-HTML5
-CSS3
-JavaScript (ES6+)
-React.js
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React.js
 
 ## Features
-User authentication with sign in and register functionalities.
-Ability to detect faces in images using the Clarifai API.
-Secure password hashing using bcrypt.js.
-Responsive design for seamless user experience across devices.
-Integration with a PostgreSQL database for storing user information.
-Deployed on Render for reliable hosting and scalability.
+- User authentication with sign in and register functionalities.
+- Ability to detect faces in images using the Clarifai API.
+- Secure password hashing using bcrypt.js.
+- Responsive design for seamless user experience across devices.
+- Integration with a PostgreSQL database for storing user information.
+- Deployed on Render for reliable hosting and scalability.
 
 ## Getting Started
 To run the frontend locally, follow these steps:
@@ -24,4 +24,4 @@ To run the frontend locally, follow these steps:
 5. Open your browser and visit http://localhost:3000.
 
 ## Deployment
-This frontend is deployed on Render. Visit https://your-app-url.com to access the live application.
+This frontend is deployed on Render. Visit https://jp-smart-brain.onrender.com to access the live application.
